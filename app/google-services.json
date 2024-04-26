@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "364602332471",
+    "project_id": "meow-himmel",
+    "storage_bucket": "meow-himmel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364602332471:android:ded27b258865cd9a8a76b2",
+        "android_client_info": {
+          "package_name": "com.meow.himmel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgtR6a39EXa-QESmAOLpopuNJgfKkpZg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

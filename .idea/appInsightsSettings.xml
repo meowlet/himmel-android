@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.meow.himmel" />
+                  <option name="mobileSdkAppId" value="1:364602332471:android:ded27b258865cd9a8a76b2" />
+                  <option name="projectId" value="meow-himmel" />
+                  <option name="projectNumber" value="364602332471" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
