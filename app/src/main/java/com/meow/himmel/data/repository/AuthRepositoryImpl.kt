@@ -9,36 +9,35 @@ import kotlinx.coroutines.tasks.await
 class AuthRepositoryImpl(
     private val firebaseAuth: FirebaseAuth
 ) : AuthRepository {
-    override fun isUserLoggedIn() = firebaseAuth.currentUser != null
+    override fun isUserSignedIn(): Boolean = firebaseAuth.currentUser != null
 
     override fun signIn(email: String, password: String) = flow {
-        emit(Response.Waiting)
+        emit(Response.Loading)
         try {
             firebaseAuth.signInWithEmailAndPassword(email, password).await()
-            emit(Response.Success(true))
+            emit(Response.Success(Unit))
         } catch (e: Exception) {
             emit(Response.Failure(e))
         }
     }
 
     override fun signUp(email: String, password: String) = flow {
-        emit(Response.Waiting)
+        emit(Response.Loading)
         try {
             firebaseAuth.createUserWithEmailAndPassword(email, password).await()
-            emit(Response.Success(true))
+            emit(Response.Success(Unit))
         } catch (e: Exception) {
             emit(Response.Failure(e))
         }
     }
 
     override fun signOut() = flow {
-        emit(Response.Waiting)
+        emit(Response.Loading)
         try {
             firebaseAuth.signOut()
-            emit(Response.Success(true))
+            emit(Response.Success(Unit))
         } catch (e: Exception) {
             emit(Response.Failure(e))
         }
     }
-
 }
