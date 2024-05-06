@@ -4,7 +4,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.meow.himmel.data.repository.AuthRepositoryImpl
 import com.meow.himmel.domain.repository.AuthRepository
 import com.meow.himmel.domain.use_case.UseCase
+import com.meow.himmel.domain.use_case.auth.SignIn
+import com.meow.himmel.domain.use_case.auth.SignOut
 import com.meow.himmel.domain.use_case.auth.SignUp
+import com.meow.himmel.domain.use_case.auth.UserCheck
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,7 +38,10 @@ object AppModule {
         authRepository: AuthRepository
     ): UseCase {
         return UseCase(
-            signUp = SignUp(authRepository)
+            userCheck = UserCheck(authRepository),
+            signUp = SignUp(authRepository),
+            signIn = SignIn(authRepository),
+            signOut = SignOut(authRepository)
         )
     }
 }
