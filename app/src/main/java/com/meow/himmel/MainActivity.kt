@@ -9,8 +9,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import com.meow.himmel.presentation.home.HomeScreen
-import com.meow.himmel.presentation.main.MainLayoutViewModel
-import com.meow.himmel.presentation.main.MainLayout
+import com.meow.himmel.presentation.main_layout.MainLayoutViewModel
+import com.meow.himmel.presentation.main_layout.MainLayout
 import com.meow.himmel.presentation.more.MoreScreen
 import com.meow.himmel.presentation.profile.ProfileScreen
 import com.meow.himmel.presentation.sign_in.SignInScreen
