@@ -5,33 +5,23 @@ import com.meow.himmel.domain.repository.AuthRepository
 import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 
-class SignUp(
+class SignIn(
     private val repository: AuthRepository
 ) {
     private fun fieldValidate(email: String, password: String): Boolean {
         return email.isNotEmpty() && password.isNotEmpty()
     }
 
-    private fun passwordValidate(password: String, confirmPassword: String): Boolean {
-        return password == confirmPassword
-    }
-
     operator fun invoke(
-        email: String,
-        password: String,
-        confirmPassword: String
+        email: String, password: String
     ) = flow {
         when {
             !fieldValidate(email, password) -> {
                 emit(Response.Failure(Exception("Please fill all fields")))
             }
 
-            !passwordValidate(password, confirmPassword) -> {
-                emit(Response.Failure(Exception("Password doesn't match")))
-            }
-
             else -> {
-                emitAll(repository.signUp(email, password))
+                emitAll(repository.signIn(email, password))
             }
         }
     }
