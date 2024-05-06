@@ -73,9 +73,15 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    // Extended icon set
+    implementation("br.com.devsrsouza.compose.icons:font-awesome:1.1.0")
+
     // Dagger - Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation ("com.google.dagger:hilt-android:2.51.1")
+    kapt ("com.google.dagger:hilt-compiler:2.51.1")
+
+    // Jetpack Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 }
 
 kapt {
