@@ -10,4 +10,5 @@ plugins {
 
     // Dependency injection
     id("com.google.dagger.hilt.android") version "2.51.1" apply false
+    alias(libs.plugins.googleGmsGoogleServices) apply false
 }

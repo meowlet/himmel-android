@@ -28,7 +28,6 @@ import com.meow.himmel.presentation.common.HimmelLogo
 import com.meow.himmel.presentation.common.IconButton
 import com.meow.himmel.presentation.common.SingleLinedTextField
 import com.meow.himmel.presentation.common.SingleLinedToggleablePasswordField
-import com.meow.himmel.presentation.util.CoreScreen
 import compose.icons.FontAwesomeIcons
 import compose.icons.fontawesomeicons.Brands
 import compose.icons.fontawesomeicons.brands.Facebook

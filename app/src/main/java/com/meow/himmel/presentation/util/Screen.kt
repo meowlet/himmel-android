@@ -12,11 +12,11 @@ import compose.icons.FontAwesomeIcons
 import compose.icons.fontawesomeicons.Regular
 import compose.icons.fontawesomeicons.regular.Smile
 
-sealed class CoreScreen(
+sealed class Screen(
     val route: String,
 ) {
-    data object AuthScreen : CoreScreen("auth_screen")
-    data object MainScreen : CoreScreen("main_screen")
+    data object AuthScreen : Screen("auth_screen")
+    data object MainScreen : Screen("main_screen")
 }
 
 sealed class AuthScreen(val route: String) {

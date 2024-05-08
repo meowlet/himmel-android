@@ -1,10 +1,10 @@
 package com.meow.himmel.domain.model
 
 data class User (
-    val userId: String,
-    val email: String,
-    val userName: String,
-    val displayName: String,
-    val bio: String,
-    val photoUrl: String,
+    val id: String = "user.id",
+    val email: String = "user.email",
+    val userName: String = "user.name",
+    val displayName: String = "user.displayName",
+    val bio: String = "user.bio",
+    val photoUrl: String = "user.photoUrl",
 )

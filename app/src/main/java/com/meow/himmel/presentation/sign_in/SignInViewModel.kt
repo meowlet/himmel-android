@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.meow.himmel.domain.model.Response
 import com.meow.himmel.domain.use_case.UseCase
 import com.meow.himmel.presentation.util.AuthScreen
-import com.meow.himmel.presentation.util.CoreScreen
+import com.meow.himmel.presentation.util.Screen
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -52,7 +52,7 @@ class SignInViewModel @Inject constructor(
                     signInResponse = Response.Idling
                 )
                 _eventFlow.emit(SignInUiEvent.ShowToast("Sign in success, taking you to the main screen"))
-                _eventFlow.emit(SignInUiEvent.Navigate(CoreScreen.MainScreen.route))
+                _eventFlow.emit(SignInUiEvent.Navigate(Screen.MainScreen.route))
             }
 
             SignInEvent.SignUp -> viewModelScope.launch {

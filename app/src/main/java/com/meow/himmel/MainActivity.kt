@@ -18,7 +18,7 @@ import com.meow.himmel.presentation.sign_in.SignInViewModel
 import com.meow.himmel.presentation.sign_up.SignUpScreen
 import com.meow.himmel.presentation.sign_up.SignUpViewModel
 import com.meow.himmel.presentation.util.AuthScreen
-import com.meow.himmel.presentation.util.CoreScreen
+import com.meow.himmel.presentation.util.Screen
 import com.meow.himmel.ui.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -40,10 +40,10 @@ class MainActivity : ComponentActivity() {
                 ) {
                     NavHost(
                         navController = navController,
-                        startDestination = CoreScreen.AuthScreen.route
+                        startDestination = Screen.AuthScreen.route
                     ) {
                         navigation(
-                            route = CoreScreen.AuthScreen.route,
+                            route = Screen.AuthScreen.route,
                             startDestination = AuthScreen.SignIn.route
                         ) {
                             composable(AuthScreen.SignUp.route) {
@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
                         }
 
                         navigation(
-                            route = CoreScreen.MainScreen.route,
+                            route = Screen.MainScreen.route,
                             startDestination = com.meow.himmel.presentation.util.MainScreen.Home.route
                         ) {
                             composable(com.meow.himmel.presentation.util.MainScreen.Home.route) {
